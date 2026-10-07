@@ -15,11 +15,14 @@ function Landing() {
       <div className="flex flex-row gap-x-4 justify-center">
         <Link
           to={"/about"}
-          className="bg-white p-0.5 text-center rounded-xl max-w-56"
+          className="bg-white p-0.5 text-center text-black rounded-xl max-w-56"
         >
           About Me
         </Link>
-        <Link className="bg-white p-0.5 text-center rounded-xl max-w-56">
+        <Link
+          to={"/experience"}
+          className="bg-white p-0.5 text-center text-black rounded-xl max-w-56"
+        >
           Experience
         </Link>
       </div>

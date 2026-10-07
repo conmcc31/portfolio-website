@@ -5,6 +5,7 @@ import App from "./App.jsx";
 import AboutMe from "./AboutMe.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router";
 import Landing from "./Landing.jsx";
+import Experience from "./Experience.jsx";
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
       {
         path: "/about",
         element: <AboutMe />,
+      },
+      {
+        path: "/experience",
+        element: <Experience />,
       },
     ],
   },

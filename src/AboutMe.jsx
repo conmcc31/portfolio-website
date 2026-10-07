@@ -3,7 +3,7 @@ import { Link } from "react-router";
 function AboutMe() {
   return (
     <div className="px-10 py-8">
-      <h1 className="text-white text-6xl font-bold">About Me</h1>
+      <h1 className="page-header">About Me</h1>
       <p className="text-white">
         I'm a full-stack software engineer focused on building modern web
         applications, APIs, and data-driven systems.

@@ -16,6 +16,9 @@ function NavBar() {
           <Link to={"/about"} onClick={() => setMenuOpen(false)}>
             About Me
           </Link>
+          <Link to={"/experience"} onClick={() => setMenuOpen(false)}>
+            Experience
+          </Link>
         </div>
       )}
     </nav>
