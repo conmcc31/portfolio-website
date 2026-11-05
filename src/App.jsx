@@ -15,7 +15,14 @@ function App() {
       <a className="skip-link" href="#main-content">Skip to content</a>
       <NavBar />
       <main id="main-content" tabIndex={-1}><Outlet /></main>
-      <footer className="site-footer page-width"><Link className="footer-name" to="/">Conor McCarthy<span>Full-stack Software Engineer</span></Link><p>Interfaces, APIs, and everything between.</p><a className="text-link" href="#main-content">Back to top <span aria-hidden="true">↑</span></a></footer>
+      <footer className="site-footer page-width">
+        <Link className="footer-name" to="/">Conor McCarthy<span>Full-stack Software Engineer</span></Link>
+        <p>Interfaces, APIs, and everything between.</p>
+        <div className="footer-contact">
+          <a className="text-link" href="mailto:conmcc31@gmail.com">Get in touch <span aria-hidden="true">↗</span></a>
+          <a className="text-link" href="#main-content">Back to top <span aria-hidden="true">↑</span></a>
+        </div>
+      </footer>
     </div>
   );
 }

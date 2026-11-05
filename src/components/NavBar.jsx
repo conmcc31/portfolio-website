@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link, NavLink } from "react-router";
+import ResumeLink from "./ResumeLink";
 
 function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -13,6 +14,7 @@ function NavBar() {
           <NavLink to="/" end onClick={closeMenu}>Home</NavLink>
           <NavLink to="/experience" onClick={closeMenu}>Experience</NavLink>
           <NavLink to="/about" onClick={closeMenu}>About</NavLink>
+          <ResumeLink className="resume-nav" />
         </div>
       </nav>
     </header>

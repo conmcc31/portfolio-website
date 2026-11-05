@@ -1,138 +1,51 @@
+import { experience } from "./data/experience";
+import ResumeLink from "./components/ResumeLink";
+
 function Experience() {
   return (
-    <div className="px-12 py-10">
-      <h1 className="page-header">Experience</h1>
-      <div className="mt-10 flex flex-col">
-        <h2 className="text-3xl font-bold">Principal Software Engineer</h2>
-        <h3 className="text-xl">Fidelity Investments | Labs</h3>
-        <h3 className="text-xl">February 2026 - Present</h3>
-        <ul className="list-disc">
-          <li>
-            Build backend APIs and data-layer functionality with TypeScript,
-            NestJS, Prisma, and PostgreSQL, supported by AWS cloud services and
-            deployment workflows.
-          </li>
-          <li>
-            Led delivery of a historical pricing API endpoint for the top 200
-            crypto assets, including work shaping, task breakdown, and timeline
-            planning.
-          </li>
-          <li>
-            Led design and implementation of a secondary CoinGecko pricing
-            integration, improving pricing reliability and supporting broader
-            crypto asset coverage.
-          </li>
-          <li>
-            Serve as a Principal Engineer on a B2B crypto asset connectivity
-            platform supporting wallet/account tracking, compliance, financial
-            planning, and asset verification.
-          </li>
-          <li>
-            Collaborate within Fidelity Labs on an early-stage product with
-            active clients, balancing product development with enterprise
-            engineering standards.
-          </li>
-          <li>
-            Contributed to React dashboard features that give account managers a
-            centralized view of member crypto holdings and investment data.
-          </li>
-        </ul>
-      </div>
-      <div className="mt-10 flex flex-col">
-        <h2 className="text-3xl font-bold">Software Engineer</h2>
-        <h3 className="text-xl">NielsenIQ (NIQ) | BASES Platform</h3>
-        <h3 className="text-xl">April 2022 - February 2026</h3>
-        <ul className="list-disc">
-          <li>
-            Modernized legacy Groovy-based backend APIs and optimized query
-            logic in MongoDB and SQL Server.
-          </li>
-          <li>
-            Supported the cloud migration of multiple microservices to Microsoft
-            Azure, including Dockerization and CI/CD setup for automated
-            deployments.
-          </li>
-          <li>
-            Led development of new deliverables that translate consumer trial
-            and survey data into actionable insights used by global CPG clients.
-          </li>
-          <li>
-            Collaborated with global, cross-functional teams in the US,
-            Portugal, and India in an Agile environment, supporting concurrent
-            feature releases.
-          </li>
-          <li>
-            Managed feature and defect lifecycles in Jira, coordinating with
-            product owners and QA to prioritize and deliver enhancements on
-            schedule.
-          </li>
-          <li>
-            Engineered reusable Angular components and D3-powered data
-            visualizations to improve report interactivity and UX consistency
-            across the platform.
-          </li>
-          <li>
-            Drove UI/UX modernization initiatives to align legacy Ember modules
-            with new Angular front-end architecture.
-          </li>
-        </ul>
-      </div>
-      <div className="mt-10 flex flex-col">
-        <h2 className="text-3xl font-bold">Systems Engineer</h2>
-        <h3 className="text-xl">IBM Mass Lab | Maximo</h3>
-        <h3 className="text-xl">June 2020 - April 2022</h3>
-        <ul className="list-disc">
-          <li>
-            Diagnosed and resolved complex configuration and integration issues
-            for enterprise clients running IBM Maximo.
-          </li>
-          <li>
-            Tracked and resolved production incidents via Salesforce Service
-            Cloud, maintaining accurate documentation and timely client
-            communication.
-          </li>
-          <li>
-            Partnered with product engineering to reproduce critical client bugs
-            and identify code-level patch requirements.
-          </li>
-          <li>
-            Automated recurring support and data-repair workflows using SQL and
-            shell scripting, cutting issue resolution times.
-          </li>
-          <li>
-            Authored internal and client-facing documentation improving
-            knowledge transfer and product reliability.
-          </li>
-          <li>
-            Supported sensitive client environments across private, government,
-            and defence sectors with strict data-handling standards.
-          </li>
-        </ul>
-      </div>
-      <div className="mt-10 flex flex-col">
-        <h2 className="text-3xl font-bold">Systems Administrator</h2>
-        <h3 className="text-xl">IBM Mass Lab | Maximo</h3>
-        <h3 className="text-xl">June 2019 - June 2020</h3>
-        <ul className="list-disc">
-          <li>
-            Built and maintained virtual environments supporting multiple Maximo
-            product teams.
-          </li>
-          <li>
-            Developed and tuned SQL queries across large DB2 and Oracle schemas
-            containing hundreds of tables.
-          </li>
-          <li>
-            Customized Maximo builds per client specifications and deployed
-            through controlled test and production environments.
-          </li>
-          <li>
-            Streamlined server provisioning by introducing standardized VM
-            templates for multi-platform testing.
-          </li>
-        </ul>
-      </div>
+    <div className="experience-page page-width">
+      <section className="experience-intro" aria-labelledby="experience-title">
+        <div>
+          <p className="eyebrow">PROFESSIONAL EXPERIENCE / 2019–PRESENT</p>
+          <h1 id="experience-title" className="page-header">Full-stack work.<br /><span>Systems perspective.</span></h1>
+          <p className="experience-lede">
+            From enterprise systems to analytics products and digital-asset APIs,
+            I’ve worked across the stack to build features, modernize applications,
+            and connect complex data with useful interfaces.
+          </p>
+          <ResumeLink />
+        </div>
+        <aside className="experience-index" aria-label="Jump to employer">
+          <p className="eyebrow">THE PATH SO FAR</p>
+          <a href="#fidelity"><span>2026 — Present</span>Fidelity Labs <span aria-hidden="true">↓</span></a>
+          <a href="#niq"><span>2022 — 2026</span>NIQ <span aria-hidden="true">↓</span></a>
+          <a href="#ibm-engineer"><span>2019 — 2022</span>IBM <span aria-hidden="true">↓</span></a>
+        </aside>
+      </section>
+
+      <section className="experience-history" aria-label="Employment history">
+        {experience.map((job) => (
+          <article className="experience-entry" id={job.id} key={job.id} aria-labelledby={`${job.id}-title`}>
+            <div className="experience-meta">
+              <p className="eyebrow">{job.start} — {job.end}</p>
+              <p className="experience-company">{job.company}</p>
+              <p className="experience-product">{job.product}</p>
+            </div>
+            <div className="experience-detail">
+              <h2 id={`${job.id}-title`}>{job.role}</h2>
+              <p className="experience-summary">{job.summary}</p>
+              <ul className="contribution-list">
+                {job.contributions.map((contribution) => <li key={contribution}>{contribution}</li>)}
+              </ul>
+              <ul className="tag-list" aria-label={`${job.company} technologies`}>
+                {job.technologies.map((technology) => <li key={technology}>{technology}</li>)}
+              </ul>
+            </div>
+          </article>
+        ))}
+      </section>
     </div>
   );
 }
+
 export default Experience;

@@ -6,7 +6,7 @@ const work = [
     category: "FIDELITY LABS · BACKEND & DATA",
     title: "More dependable crypto pricing.",
     description:
-      "Delivered a historical pricing API for the top 200 crypto assets and designed a secondary pricing integration to improve reliability and broaden coverage.",
+      "Built an approximately eight-year pricing backfill and hourly updates for the top 200 crypto assets, plus a secondary provider integration to support reliability and broader coverage.",
     tags: ["TypeScript", "NestJS", "PostgreSQL", "AWS"],
   },
   {
@@ -20,10 +20,10 @@ const work = [
   {
     number: "03",
     category: "NIQ · PLATFORM MODERNIZATION",
-    title: "Moving established systems forward.",
+    title: "Bringing a legacy product forward.",
     description:
-      "Modernized legacy backend APIs, optimized database queries, and supported microservice migrations to Azure with Docker and automated deployment workflows.",
-    tags: ["APIs", "MongoDB", "SQL Server", "Azure"],
+      "Independently migrated the final approximately six legacy features into Angular, enabling retirement of the older product. Built configurable functionality that could be reused across products.",
+    tags: ["Angular", "TypeScript", "Application modernization"],
   },
 ];
 
