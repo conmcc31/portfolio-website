@@ -209,7 +209,16 @@ function Landing() {
           <a className="button button-primary" href="mailto:conmcc31@gmail.com">
             Email me <Arrow />
           </a>
-          <a className="button button-secondary" href="https://github.com/conmcc31">
+          <a
+            className="button button-secondary"
+            href="https://www.linkedin.com/in/conor-mccarthy-34aa0916a"
+          >
+            LinkedIn <Arrow />
+          </a>
+          <a
+            className="button button-secondary"
+            href="https://github.com/conmcc31"
+          >
             GitHub <Arrow />
           </a>
         </div>
