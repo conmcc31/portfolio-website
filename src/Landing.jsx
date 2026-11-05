@@ -192,6 +192,28 @@ function Landing() {
           </Link>
         </div>
       </section>
+      <section
+        className="contact-section page-width"
+        id="contact"
+        aria-labelledby="contact-title"
+      >
+        <div>
+          <p className="eyebrow">GET IN TOUCH</p>
+          <h2 id="contact-title">Have a role in mind? Let’s talk.</h2>
+          <p className="contact-description">
+            I’m interested in senior and principal full-stack engineering roles
+            where I can stay hands-on building useful software.
+          </p>
+        </div>
+        <div className="contact-actions">
+          <a className="button button-primary" href="mailto:conmcc31@gmail.com">
+            Email me <Arrow />
+          </a>
+          <a className="button button-secondary" href="https://github.com/conmcc31">
+            GitHub <Arrow />
+          </a>
+        </div>
+      </section>
     </>
   );
 }

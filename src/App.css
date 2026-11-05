@@ -95,6 +95,14 @@
 .nav-links .resume-nav { display: flex; align-items: center; gap: 12px; border: 1px solid #4b5943; color: var(--accent); border-radius: 3px; padding: 10px 14px; }
 .nav-links .resume-nav:hover { background: #252e23; color: #d0e7b7; }
 .footer-contact { display: flex; flex-wrap: wrap; align-items: center; gap: 24px; }
+.contact-section { display: flex; align-items: center; justify-content: space-between; gap: 40px; padding-block: 48px 64px; border-top: 1px solid var(--line); }
+.contact-section .eyebrow { margin: 0 0 16px; }
+.contact-section h2 { font-size: clamp(28px, 3vw, 38px); line-height: 1.25; letter-spacing: -1.2px; font-weight: 500; margin: 0 0 18px; }
+.contact-description { max-width: 570px; color: #aeb7ae; font-size: 15px; line-height: 1.8; margin: 0; }
+.contact-actions { display: flex; flex-wrap: wrap; gap: 12px; flex-shrink: 0; }
+.button-secondary { border: 1px solid #4b5943; color: var(--accent); }
+.button-secondary:hover { background: #252e23; }
+@media (max-width: 1050px) { .contact-section { align-items: flex-start; flex-direction: column; gap: 26px; } }
 @media (max-width: 1050px) { .experience-intro { gap: 40px; } .experience-entry { gap: 40px; } }
 @media (max-width: 760px) {
   .experience-page, .about-page { padding-block: 45px 60px; }

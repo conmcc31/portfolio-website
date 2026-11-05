@@ -20,6 +20,7 @@ function App() {
         <p>Interfaces, APIs, and everything between.</p>
         <div className="footer-contact">
           <a className="text-link" href="mailto:conmcc31@gmail.com">Get in touch <span aria-hidden="true">↗</span></a>
+          <a className="text-link" href="https://github.com/conmcc31">GitHub <span aria-hidden="true">↗</span></a>
           <a className="text-link" href="#main-content">Back to top <span aria-hidden="true">↑</span></a>
         </div>
       </footer>
