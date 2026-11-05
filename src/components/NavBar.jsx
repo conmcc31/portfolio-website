@@ -1,27 +1,21 @@
 import { useState } from "react";
-import { Outlet, Link } from "react-router";
+import { Link, NavLink } from "react-router";
 
 function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const closeMenu = () => setMenuOpen(false);
   return (
-    <nav className="fixed top-4 left-4 z-50 text-white">
-      <button onClick={() => setMenuOpen(!menuOpen)} className="text-3xl">
-        ☰
-      </button>
-      {menuOpen && (
-        <div className="mt-2 flex flex-col gap-2 rounded-xl bg-black/70 p-4 backdrop-blur-sm">
-          <Link to={"/"} onClick={() => setMenuOpen(false)}>
-            Home
-          </Link>
-          <Link to={"/about"} onClick={() => setMenuOpen(false)}>
-            About Me
-          </Link>
-          <Link to={"/experience"} onClick={() => setMenuOpen(false)}>
-            Experience
-          </Link>
+    <header className="site-header">
+      <nav className="nav-inner page-width" aria-label="Main navigation" onKeyDown={(event) => { if (event.key === "Escape") { setMenuOpen(false); event.currentTarget.querySelector("button")?.focus(); } }}>
+        <Link className="brand" to="/" onClick={closeMenu} aria-label="Conor McCarthy home">cm<span>.</span></Link>
+        <button className="menu-toggle" type="button" aria-expanded={menuOpen} aria-controls="navigation-links" onClick={() => setMenuOpen(!menuOpen)}>{menuOpen ? "Close" : "Menu"}<span aria-hidden="true">{menuOpen ? "−" : "+"}</span></button>
+        <div id="navigation-links" className={`nav-links${menuOpen ? " is-open" : ""}`}>
+          <NavLink to="/" end onClick={closeMenu}>Home</NavLink>
+          <NavLink to="/experience" onClick={closeMenu}>Experience</NavLink>
+          <NavLink to="/about" onClick={closeMenu}>About</NavLink>
         </div>
-      )}
-    </nav>
+      </nav>
+    </header>
   );
 }
 export default NavBar;

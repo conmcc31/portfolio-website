@@ -1,5 +1,3 @@
-import { Link } from "react-router";
-
 function AboutMe() {
   return (
     <div className="px-10 py-8">
