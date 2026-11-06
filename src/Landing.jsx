@@ -206,7 +206,10 @@ function Landing() {
           </p>
         </div>
         <div className="contact-actions">
-          <a className="button button-primary" href="mailto:conmcc31@gmail.com">
+          <a
+            className="button button-primary"
+            href="mailto:contact@conorbuilds.dev"
+          >
             Email me <Arrow />
           </a>
           <a

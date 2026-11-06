@@ -30,7 +30,7 @@ function App() {
         </Link>
         <p>Interfaces, APIs, and everything between.</p>
         <div className="footer-contact">
-          <a className="text-link" href="mailto:conmcc31@gmail.com">
+          <a className="text-link" href="mailto:contact@conorbuilds.dev">
             Get in touch <span aria-hidden="true">↗</span>
           </a>
           <a
