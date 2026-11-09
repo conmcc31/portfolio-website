@@ -22,7 +22,7 @@ const work = [
     category: "NIQ · PLATFORM MODERNIZATION",
     title: "Bringing a legacy product forward.",
     description:
-      "Independently migrated the final approximately six legacy features into Angular, enabling retirement of the older product. Built configurable functionality that could be reused across products.",
+      "Independently migrated the final remaining features of our legacy codebase into Angular, enabling retirement of the older product. Built configurable functionality that could be reused across products.",
     tags: ["Angular", "TypeScript", "Application modernization"],
   },
 ];
